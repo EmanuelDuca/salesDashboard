@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sales Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="sales-data">Customers<br/><span id="sales-data-customer">-</span></div>
+            </div>
+            <div class="col-auto">
+                <div class="sales-data">Orders<br/><span id="sales-data-orders">-</span></div>
+            </div>
+            <div class="col-auto">
+                <div class="sales-data">Income<br/><span id="sales-data-income">-</span></div>
+            </div>
+        </div>
+
+        <div class="timeframe-selection mt-4 text-center">
+            <h5>Select a Month from 2023</h5>
+            <div class="dropdown d-inline">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Month
+                </button>                  
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" >January</a></li>
+                  <li><a class="dropdown-item" >February</a></li>
+                  <li><a class="dropdown-item" >March</a></li>
+                  <li><a class="dropdown-item" >April</a></li>
+                  <li><a class="dropdown-item" >May</a></li>
+                  <li><a class="dropdown-item" >June</a></li>
+                  <li><a class="dropdown-item" >July</a></li>
+                  <li><a class="dropdown-item" >August</a></li>
+                  <li><a class="dropdown-item" >September</a></li>
+                  <li><a class="dropdown-item" >October</a></li>
+                  <li><a class="dropdown-item" >November</a></li>
+                  <li><a class="dropdown-item" >December</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <canvas id="myChart" class="mt-4" style="width:100%; max-width:700px"></canvas>
+        
+        <div class="customer-table mt-5">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Orders</th>
+                  <th scope="col">Money spent</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <footer class="footer mt-5 py-3 bg-dark text-white text-center">
+        <div class="container">
+            Sales Dashboard © 2023
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="../src/index.js"></script>
+</body>
+</html>
